@@ -1,0 +1,22 @@
+.modal {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+ .modal>img {
+    width: 90%;
+    height: 90%;
+  }
+
+.ReactModal__Overlay, 
+.ReactModal__Overlay--after-open
+  {background-color: rgba(0, 0, 0, 0.75);}
+  
