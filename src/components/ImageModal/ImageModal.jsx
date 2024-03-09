@@ -3,7 +3,7 @@ import css from "./ImageModal.module.css";
 
 ReactModal.setAppElement("#root");
 
-export default function ModalWindow({ isOpen, itemUrl, onClose }) {
+export default function ImageModal({ isOpen, itemUrl, onClose }) {
   return (
     <div className={css.modalOverlay}>
       <ReactModal

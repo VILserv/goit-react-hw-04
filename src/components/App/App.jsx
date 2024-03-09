@@ -6,7 +6,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import { Toaster } from "react-hot-toast";
 import Loader from "../Loader/Loader";
-import ModalWindow from "../ImageModal/ImageModal";
+import ImageModal from "../ImageModal/ImageModal";
 import ReactModal from "react-modal";
 
 ReactModal.setAppElement("#root");
@@ -19,8 +19,6 @@ export default function App() {
   const [error, setError] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const [isOpenModal, setIsOpenModal] = useState(false);
-
-  // const [showBtn, setShowBtn] = useState(false);
 
   useEffect(() => {
     if (searchQuery === "") {
@@ -80,7 +78,7 @@ export default function App() {
 
       {isLoading && <Loader />}
       {selectedPhoto && (
-        <ModalWindow
+        <ImageModal
           isOpen={isOpenModal}
           itemUrl={selectedPhoto}
           onClose={onCloseModal}

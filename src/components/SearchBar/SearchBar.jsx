@@ -12,6 +12,7 @@ export default function SearchBar({ onSearch }) {
           const errors = {};
           if (!values.query.trim()) {
             toast.error("Please enter a search query!");
+            errors.query = "Please enter a search query!";
           }
           return errors;
         }}
@@ -31,7 +32,7 @@ export default function SearchBar({ onSearch }) {
               placeholder="Search images and photos"
             />
           </div>
-          <ErrorMessage name="query">
+          <ErrorMessage name="query" component="div" className={css.error}>
             <Toaster position="top-center" />
           </ErrorMessage>
         </Form>
